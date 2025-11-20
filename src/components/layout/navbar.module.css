@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  width: 100%;
+  border-bottom: 1px solid var(--card-border);
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-fixed);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--transition-normal);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 120px;
+}
+
+.icon {
+  position: relative;
+  top: -1px;
+  margin-right: var(--space-2);
+  font-size: 1.1em;
+  transition: transform var(--transition-fast);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.navLink:hover {
+  background-color: var(--card-bg);
+  color: var(--accent-color);
+}
+
+.navLink:hover .icon {
+  transform: translateY(-1px);
+}
+
+.navLink.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius-full);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .navLinks {
+    gap: var(--space-3);
+    margin-left: var(--space-4);
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  .navLink {
+    font-size: var(--text-sm);
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .icon {
+    font-size: 1em;
+    margin-right: var(--space-1);
+  }
+}

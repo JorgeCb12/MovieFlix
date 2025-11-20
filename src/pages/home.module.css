@@ -1,0 +1,105 @@
+
+.homeContainer {
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
+.homeTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.searchContainer {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.movieGridContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 2rem auto;
+  backdrop-filter: blur(10px);
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.emptyStateText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+
+@media (min-width: 768px) {
+  .homeContainer {
+    padding: 2rem;
+  }
+  
+  .homeTitle {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+  
+  .searchContainer {
+    padding: 0;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .homeContainer {
+    padding: 3rem 2rem;
+  }
+  
+  .homeTitle {
+    font-size: 3rem;
+    margin: 2.5rem 0;
+  }
+  
+  .emptyState {
+    padding: 3rem;
+  }
+  
+  .emptyStateText {
+    font-size: 1.25rem;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animateFadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}

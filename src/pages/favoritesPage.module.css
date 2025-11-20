@@ -1,0 +1,285 @@
+
+.favoritesPage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
+
+.header {
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(67, 56, 202, 0.1) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l-5.647 5.66 5.64 5.66 5.653-5.66L54.627 0zM5.346 0L-.293 5.66l5.633 5.66 5.653-5.66L5.346 0zm24.84 0l-5.64 5.66 5.633 5.66 5.647-5.66L30.186 0zM.003 30l5.64-5.653L0 18.694l-5.653 5.653L.003 30zm11.3 0l5.64-5.653L11.3 18.694l-5.653 5.653L11.303 30zM5.34 60l5.66-5.653L5.34 48.694l-5.66 5.653L5.34 60zm24.84 0l5.66-5.653-5.653-5.653-5.66 5.653L30.18 60zm24.84 0l5.66-5.653-5.653-5.653-5.66 5.653L55.02 60zM30 35.3l5.653-5.66L30 24 24.347 29.66 30 35.3zm0 11.34l5.653-5.66L30 35.34l-5.653 5.64L30 46.64zM0 41.36l5.653-5.66L0 30.04l-5.653 5.66L0 41.36zm60-11.32L54.347 35.3 60 41.34l5.653-5.66L60 30.04zM30 5.36l5.653-5.66L30-5.96l-5.653 5.66L30 5.36zM11.36 60l5.653-5.66L11.36 48.68 5.707 54.34 11.36 60zM48.64 60l5.653-5.66L48.64 48.68 42.987 54.34 48.64 60z' fill='%236c63ff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.7;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  font-family: var(--font-primary);
+  line-height: 1.2;
+}
+
+.titleIcon {
+  color: #ff6b6b;
+  font-size: 2.2rem;
+}
+
+.countBadge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+  opacity: 0.9;
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+.clearButton {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: var(--text-base);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.clearButton:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+.clearButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.moviesContainer {
+  padding: 1rem 0;
+}
+
+
+.emptyState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-primary);
+}
+
+.emptyStateContent {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.heartIconContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 107, 107, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+.heartIcon {
+  font-size: 3rem;
+  color: #ff6b6b;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.emptyState h1 {
+  font-size: var(--text-3xl);
+  margin: 1.5rem 0 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.emptyState p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+.browseButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6c63ff;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.browseButton:hover {
+  background: #5a50e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.arrowIcon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.browseButton:hover .arrowIcon {
+  transform: translateX(-3px);
+}
+
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .countBadge {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+  
+  .emptyState h1 {
+    font-size: 1.75rem;
+  }
+  
+  .emptyState p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .headerContent {
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.7rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .clearButton {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .emptyState {
+    padding: 1rem;
+  }
+  
+  .emptyState h1 {
+    font-size: 1.6rem;
+  }
+  
+  .browseButton {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+  }
+}

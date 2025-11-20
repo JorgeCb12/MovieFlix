@@ -31,3 +31,14 @@ El proyecto está construido con un enfoque en **arquitectura limpia**, **compon
 
 ## 📁 Estructura del proyecto
 
+src/
+│── assets/ → Imágenes y recursos
+│── components/ → Componentes reutilizables (MovieCard, MovieGrid, etc.)
+│── context/ → Contexto global (favoritos, estados)
+│── hooks/ → Custom hooks
+│── pages/ → Páginas principales (Home, Details, Favorites)
+│── services/ → Conexión con la API externa
+│── utils/ → Funciones de utilidad
+│── App.jsx → Rutas principales
+│── main.jsx → Punto de entrada
+
